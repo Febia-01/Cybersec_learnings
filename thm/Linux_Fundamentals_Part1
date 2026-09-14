@@ -1,0 +1,12 @@
+whoami - tells you who you are on the system
+echo - output the specific text that is provided
+ls - list the files inside the folder 
+cd - change directory, moves into the folder
+cat - displays the content of the file
+pwd - present working directory, tells you where are you currently
+find - search for files by name
+grep - search for texts inside a file
+& - runs the command and does not wait for it to complete for you to do anything else
+&& - runs both the commands and wait for the first command to finish first
+> - redirect command output to a file, this overwrites the content in the file
+>> - redirects the output as well but does not overwrites it, the content will be added to the bottom of the file
