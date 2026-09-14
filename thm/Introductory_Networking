@@ -1,1 +1,80 @@
+OSI model and TCP/IP model
 
+OSI (Open System Interconnection) model - demonstrate the theory behind networking
+TCP/IP (Transmission Control Protocol / Internet Protocol) model - in practical, the real-world networking is based-off.
+
+OSI layers
+1. Application layer:
+  - provides an interface to application to transmit over network
+  - data passed down to the presentation layer
+2. Presentation layer:
+  - convert the data into a standardised format
+  - encryption/decryption, compression, or other data transformation will be handled
+3. Session layer:
+  - setup connection with computer over the network
+  - connection establishment and maintenance
+  - the connection established will be unique (thus, multiple connetion simultaneously is possible)
+4. Transport layer:
+  - select the protocol to be used (TCP or UDP)
+  - data converted to bite-sized pieces (TCP - segments, UDP - datagrams)
+5. Network layer:
+  - locating the destination requested
+  - logical addressing (provide order to network, categorizing, and sorting them) - IPv4 amd IPv6 formating
+  - also best route for transmission will be determined
+6. Data link layer:
+  - physical addressing - MAC (Media Access Control) address 
+  - helps to find out the exact system
+  - NIC (Network Interface Card) imprints the MAC address, which will be done by the manufacturer
+  - where it comes to receiving data it does the error checking to make sure that the data is not corrupted during the transmission (checksum).
+7. Physical layer:
+  - right down to the hardware
+  - converts binary data into digital signals for transmission and vice versa, while receiving
+
+Encapsulation - the process of adding specific information to the data as it passes through the layers of the models
+- Application layer header added -> Data
+- Presentation layer header added -> Data
+- Session layer header added -> Data
+- Transport layer header added -> Data (Segments or datagrams)
+- Network layer header added -> Data (packets)
+- Data link layer header and trailer added -> Data (frames)
+- Data sent across the network -> Data stream (bits)
+De-encapsulation - the reverse process of the above while receiving the data; detaching the additional info that was added in each layers.
+
+TCP / IP model: Similar to the OSI model; basis of real-world networking.
+1. Application
+2. Transport
+3. Internet
+4. Network interface
+Sometimes the network layer will be divided into data link layer and physical layer which makes it 5 layers; also valid.
+Basically, there are suits of protocols in these models.
+TCP - controls the flow of data between two endpoints
+UDP - controls how packets are addressed and sent
+
+TCP -> connection-based protocol (lossless protocol)
+3-way handshake
+1. Client to server -> SYN (synchronise)
+2. Server to client -> SYN/ACK 
+3. Client to server -> ACK (Acknowledge)
+
+Network tools:
+1. PING
+  - whether a connection to a remote server is possible or not. It works using ICMP protocol
+  - It can also be used for determining IP address of server hosting the website
+  - on website and computer on your network
+2. TRACEROUTE
+  - follow-up of ping, to understand the path that the requests takes to reach destination
+3. WHOIS 
+  - helps to get details about domain names, to whom it is registered to, etc.
+  DNS (Domain Name System) - maps the ip address with names of webpages
+4. Dig 
+  - manually requesting domain names to DNS servers, helps in network troubleshooting
+DNS:
+When we request for a website, it checks for the ip - domain mapping in the following order
+1. Host files (device)
+2. local dns cache (device)
+3. recursive DNS server
+4. root name DNS server
+5. top-level domain (tld) server [.com, .in, etc]
+6. authoritative name server
+
+TTL (Time to live) - tells the systen till when the record is valid or when it should request again for the record. It will be measured in seconds.
