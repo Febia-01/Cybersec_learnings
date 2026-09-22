@@ -1,1 +1,58 @@
+Proper enumeration has to be done before any exploitations. 
+- Know the landscape of the target - "map" the network.
+Ports - network construct for receiving connection.
+	-> will be opened by any network enabled devices.
+	-> helps in running multiple network services without errors 
+	-> the number of ports are 0-65535 (2 to the power of 16 - 65536) 
+Port scanning provides basically the mapping we need for understanding the landscape.
+Standard ports are there which is 1024 in total
+80 - http, 443 - https, 139 - Windows NETBIOS, 445 - SMB
 
+Nmap is a tool that is used for portscanning widely, it is currently the industry standard one and it has a powerful functionality. Also, with its scripting Engine, vulnerability scanning can also be done.
+Nmap switches - command arguments that tells the program to do different things.
+Some of the switches are:
+-sT - TCP Connect scan
+-sS - SYN scan
+-sU - UDP scan
+-O - OS detection
+-sV - detecting the version of the services
+-v - verbosity (-vv -level 2 verbosity and so on in similar pattern)
+-oA - report in 3 major format
+-oN - normal format 
+-oG - Grepable format
+-A - aggressive mode (service detection, os detection, traceroute, common script scanning)
+-T<number> (-T5 level 5 (0-5 level)) - timing template (speed of scan)
+-p 80	-p 1000-1025	-p- -these are the different ways of scanning particular ports
+--script - activating script library
+--script=vuln - activating all scripts in the vuln category
+Different types of scans
+1. TCP connect scan (-sT)
+SYN, SYN/ACK, ACK
+checks, maps open and completes connection
+if closed RST will be the response
+Mostly, firewall frops any new connection with SYN flag, so receives nothing back and marked as filtered.[can be changed in the firewall settings, so that it will send RST as response]
+2. SYN scan (-sS) / "Half open", "stealth"
+SYN, SYN/ACK, RST(server won't try again to establish connection)
+ - helps bypass old IDS looking for 3-way handshake
+ - will not logged because connection not established 
+ - faster than TCP scan
+ - sudo permission needed in Linux
+ - Unstable services put down which can disrupt any production environments
+** With sudo default will be SYN scan and without sudo it will TCP scan
+3. UDP scan
+no connection establishment (empty raw UDP packet send)
+- no response - open|filtered and double checks by sending again
+- if response (very rare) - open
+- if closed, ICMP packet with port unreachable message will be the response
+-- more time, more difficulty, so port numbers or range should be specified.
+4. 5. 6. NULL, FIN, and XMAS Scan 
+malformed packets
+- expects RST as response of closed 
+NULL (-sN) - empty packet without any flags will be send
+FIN (-sF) - packet with only FIN flag (usually for gracefully disconnecting an active connection)
+XMAS (-sX) - PSH, URG, and FIN flags (while viewing the packet capture on wireshark it blinks like a Christmas tree, thus the name)
+Firewall evasion is the main purpose, as there is no SYN Flag.
+* windows respond with RST to any malformed packets. 
+
+Ping sweep - sending packet to every possible IP address in the specific network to identifyactive and inactive hosts.
+nmap -sn <ip> [CIDR or range of ip with (-) is allowed]
