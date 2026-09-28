@@ -56,3 +56,37 @@ Firewall evasion is the main purpose, as there is no SYN Flag.
 
 Ping sweep - sending packet to every possible IP address in the specific network to identifyactive and inactive hosts.
 nmap -sn <ip> [CIDR or range of ip with (-) is allowed]
+
+NSE (Nmap Scripting engine) - a powerful addition to Nmap.
+NSE Scripts are written in Lua Programming language. Its functionality ranges from scanning vulnerabilities to even exploiting it. 
+Lot of categories are there, a few of them, 
+1. Safe - won't affect the target
+2. Intrusive - Not safe, likely to affect the target
+3. Vuln - scan for vulnerabilities 
+4. exploit - attempt to exploit a vulnerability
+5. auth - attempt to bypass authentication of running services
+6. brute - attempt to bruteforce credentials for runningservices
+7. discovery - attempt to query running services for further information about the network
+
+syntax -> --script=<script_name>
+- wecan add different categories separated by coma
+- some requires argument; can be added using --sript-args ; moreargs using coma and should be connected to the respective by <script-name>.<arguments>
+
+We can search for these scripts in the official website of nmap and also, it will be stored in the local system 
+	directory - /usr/share/nmap/scripts/script.db
+
+we can also search using grep "ftp" /usr/share/nmap/scripts/script.db
+also ls -l /usr/share/nmap/scripts/*ftp*
+same technique can be used to search for categories as well 
+eg: grep "safe" /usr/share/nmap/scripts/script.db
+
+NB: If any script not present locally update it -> sudo apt update && sudo apt install nmap
+or you can manually download it.
+
+Firewalls drop ICMP packets
+Nmap usually dont ping if firewall present but to evade it we have -Pn switch. It tells nmap to ping even before scanningit. (take longer when host dead - double checking)
+Some switches for the same includes:
+-f - fragment the packets (less likely to be detected)
+--mtu <number> - maximum transmission unit (must be a multiple of 8)
+--scan-delay <time>ms - evade time-based firewall
+--badsum - invalid checksum packets, used to detect the presence of firewall
