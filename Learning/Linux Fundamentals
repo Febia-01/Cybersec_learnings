@@ -1,1 +1,20 @@
+# A small history of Linux
+It is well known because of the Free and Open source speciality. 
+Earlier the well known Os were Unix & Minix - It had it's own configurations and restrictions for different use cases.
+Linus Torvalds - developed an OS which is customized to his own use cases as a hobby inspired from Unix and Minix. Later it was provided to public.
+Linux is actually a kernel not an operating system (the bridge between the hardware and the os)
 
+Richard Stallman (American Software Programmer and Activist), while working in MIT encountered some software issues while troubleshooting a printer at lab, so he realized the need of something which can be tweaked as per the need,
+which led to GNU (GNU's not Unix), - control over technology
+Free doesn't mean cashless, it's freedom (GNU introduced GPL - General Public License, which proposed 4 freedoms)
+1. Freedom to use as you wish
+2. Freedom to understand the working (access to source code)
+3. Freedom to redistribute to anyone
+4. Freedom to customize as per the need and distribute with the changes
+Debian, ArchLinux, fedora - are some foundational distributions
+from Debian -> Ubuntu, Kali, Parrot OS
+from Archlinux -> Steam OS
+from Fedora -> Redhat 
+etc.
+
+# File System
