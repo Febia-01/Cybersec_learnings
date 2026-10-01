@@ -1,0 +1,28 @@
+# Internet
+The collection of millions of devices connected through a network for communication with each other (sharing files, etc.).
+- Submarine cables (Optical fibre - for speedy transmission of data) connecting different parts of the world.
+5 connection points in India - Kochi, Trivandrum, Chennai, Mumbai, Thoothukudy
+
+Indexed & Non-indexed web pages
+Indexed - Surface web
+Non-indexed - Deep web (Authentication needed)
+
+Dark web - managed by Tor projects, tor volunteers for managing
+- purpose is anonymity and privacy
+- ARPANET (initially) + TCP/IP -> Internet [by Vint Cerf - Father of Internet]
+Normal websites - 3 servers
+  1. Guard (entry node)
+  2. Middle node 
+  3. Exit node
+.onion websites - 6 servers (out of 8500)
+Ahmia.fi - the introduction point of dark web (search engine)
+
+some important organizations
+ISoc (Internet Society), IEEE (Institute of Electrical & Electronics Engineers), IETF (Internet Engineering Task Force)
+1. ICANN (Internet Corporation for Assigned Names & Numbers)
+2. IANA (Internet Assigned Names Authority)
+3. RIRs (Regional Internet Registry) - 5 global RIRs and [APNIC (Asia Pacific Network Infromation Center)]
+4. NIRs (National Internet Registry) - IRINN (Indian Registry for Internet Names & Numbers)
+5. ISPs (Inernet Service Providers) 
+
+Public IP vs Local IP - Public IP will be the ip shown to people outside your network (routers ip which is given by the isp) while local ip is the ip given to you by your network (routers)
