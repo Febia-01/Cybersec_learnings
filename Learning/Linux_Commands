@@ -11,3 +11,9 @@ cp [-r recursive]
 mv - rename and move
 rm [-i - interactive flag, prompts before deletion]
 rmdir [-f - forcefully delete (-rf)]
+cat [-n - number the output lines]
+head [-n1 - displays only first line, -c1 - first character or byte]
+tail
+diff [-r - entire directory]
+chown [owner:group]
+chmod [owner, group, other & read(4), write(2), execute(1) & + - for adding, - - for removing]
