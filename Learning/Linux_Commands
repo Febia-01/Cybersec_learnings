@@ -1,1 +1,13 @@
-
+echo
+whoami
+id [-un]
+pwd
+~ - home directory
+ls [~ - all content in the home directory] [-l - detailed listing] [-a - hidden files] [-d - list that directory as well]
+cd
+touch
+mkdir
+cp [-r recursive]
+mv - rename and move
+rm [-i - interactive flag, prompts before deletion]
+rmdir [-f - forcefully delete (-rf)]
