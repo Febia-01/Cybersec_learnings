@@ -17,3 +17,10 @@ tail
 diff [-r - entire directory]
 chown [owner:group]
 chmod [owner, group, other & read(4), write(2), execute(1) & + - for adding, - - for removing]
+sudo
+useradd [-m - to create home directory as well]
+grep [find from directory or file [-w - match whole word]]
+passwd - to set password [-l lock, -u unlock]
+usermod - modify user properties [-d directory, -s shell, -aG append to group]
+su -switch user
+userdel [-r remove the home directory as well]
