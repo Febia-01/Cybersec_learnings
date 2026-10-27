@@ -19,8 +19,17 @@ chown [owner:group]
 chmod [owner, group, other & read(4), write(2), execute(1) & + - for adding, - - for removing]
 sudo
 useradd [-m - to create home directory as well]
-grep [find from directory or file [-w - match whole word]]
+grep [find from directory or file [-w - match whole word, -i - case insensitive, -E - search for multiple patterns ('pattern1|pattern2')]
 passwd - to set password [-l lock, -u unlock]
 usermod - modify user properties [-d directory, -s shell, -aG append to group]
 su -switch user
 userdel [-r remove the home directory as well]
+uname - displays the kernel name [-a - comprehensive system informations]
+uptime - check how long the system has been running and the load on it
+top - provides a dynamic, real-time view of running systems [q - for exiting from it]
+tar (tape archive) - for archiving [tar -czf archive.tar.gz file1 file2] (*2023* - includes all files containing 2023 in the fillename)
+	c - create new archive 
+	z - compress in gzip format (.gz is the extension for gzip compressed files)
+	f - specify filename of the archive
+dmesg - to view kernel messages
+| (pipe operator) - send the output of one command to the input of another one
