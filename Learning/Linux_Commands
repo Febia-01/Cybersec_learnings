@@ -16,7 +16,7 @@ head [-n1 - displays only first line, -c1 - first character or byte]
 tail
 diff [-r - entire directory]
 chown [owner:group]
-chmod [owner, group, other & read(4), write(2), execute(1) & + - for adding, - - for removing]
+chmod [owner, group, other & read(4), write(2), execute(1) & + - for adding, - - for removing] [(special permission)setgid g+s / 2]
 sudo
 useradd [-m - to create home directory as well]
 grep [find from directory or file [-w - match whole word, -i - case insensitive, -E - search for multiple patterns ('pattern1|pattern2')]
