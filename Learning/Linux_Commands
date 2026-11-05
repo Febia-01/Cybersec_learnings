@@ -1,4 +1,4 @@
-echo
+Commandsecho
 whoami
 id [-un]
 pwd
@@ -33,3 +33,9 @@ tar (tape archive) - for archiving [tar -czf archive.tar.gz file1 file2] (*2023*
 	f - specify filename of the archive
 dmesg - to view kernel messages
 | (pipe operator) - send the output of one command to the input of another one
+date - displays date [date +%F - ISO format (YYYY-MM-DD)]
+cal - displays calendar current month
+expr - integer arithmetic (multiplication \*)
+figlet - large letter format (ASCII art)
+touch app{1..3}.log worker{1..2}.log notes.txt - create files named app1.log app2.log app3.log worker1.log worker2.log notes.txt
+printf '%s\n' *.log - displays every files named with .log line wise
