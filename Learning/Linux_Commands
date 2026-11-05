@@ -1,4 +1,4 @@
-Commandsecho
+echo
 whoami
 id [-un]
 pwd
