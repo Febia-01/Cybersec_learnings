@@ -1,3 +1,4 @@
+Commands
 echo
 whoami
 id [-un]
@@ -6,7 +7,7 @@ pwd
 ls [~ - all content in the home directory] [-l - detailed listing] [-a - hidden files] [-d - list that directory as well]
 cd
 touch
-mkdir
+mkdir [-p - to create missing parent directory and avoids error if it's already existing]
 cp [-r recursive]
 mv - rename and move
 rm [-i - interactive flag, prompts before deletion]
@@ -18,7 +19,7 @@ diff [-r - entire directory]
 chown [owner:group]
 chmod [owner, group, other & read(4), write(2), execute(1) & + - for adding, - - for removing] [(special permission)setgid g+s / 2]
 sudo
-useradd [-m - to create home directory as well]
+useradd [-m - to create home directory as well, -U - primary group of same name, -s /bin/bash - for setting bash as shell]
 grep [find from directory or file [-w - match whole word, -i - case insensitive, -E - search for multiple patterns ('pattern1|pattern2')]
 passwd - to set password [-l lock, -u unlock]
 usermod - modify user properties [-d directory, -s shell, -aG append to group]
@@ -39,3 +40,14 @@ expr - integer arithmetic (multiplication \*)
 figlet - large letter format (ASCII art)
 touch app{1..3}.log worker{1..2}.log notes.txt - create files named app1.log app2.log app3.log worker1.log worker2.log notes.txt
 printf '%s\n' *.log - displays every files named with .log line wise
+umask - to control the permission bits removed when the shell creates new files and directories
+
+standard directories
+/etc - system wide configuration
+/home - ordinary users home directories
+/tmp - stores temporary data
+/usr - contains many installed programs and shared resources
+/var - contains changing data such as logs and caches
+
+stat -  displays metadata such as size, permissions, owner, timestamps, and inode number [An inode is the filesystem record that stores a file's metadata and points to its data. A filename is a directory entry that refers to an inode. The -i option of ls also shows inode numbers]
+ln - creates hard link (without option) [-s option creates a symbolic link, sometimes called a symlink. A symbolic link stores a path to another file.]
