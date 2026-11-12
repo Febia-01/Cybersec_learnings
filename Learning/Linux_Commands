@@ -48,5 +48,6 @@ standard directories
 /usr - contains many installed programs and shared resources
 /var - contains changing data such as logs and caches
 
-stat -  displays metadata such as size, permissions, owner, timestamps, and inode number [An inode is the filesystem record that stores a file's metadata and points to its data. A filename is a directory entry that refers to an inode. The -i option of ls also shows inode numbers]
+stat -  displays metadata such as size, permissions, owner, timestamps, and inode number [An inode is the filesystem record that stores a file's metadata and points to its data. 
+A filename is a directory entry that refers to an inode. The -i option of ls also shows inode numbers]
 ln - creates hard link (without option) [-s option creates a symbolic link, sometimes called a symlink. A symbolic link stores a path to another file.]
